@@ -25,3 +25,24 @@ Results:
 
  * Miltiple JOINs query - 4.5s.
  * Query by index table - 0.2s.
+
+## Database structure
+
+```
+CREATE TABLE `Product` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(150) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB
+
+CREATE TABLE `ProductAttribute` (
+  `product_id` int(11) NOT NULL,
+  `attribute_id` smallint(6) DEFAULT NULL,
+  `int_value` int(11) DEFAULT NULL,
+  `float_value` float DEFAULT NULL,
+  `bool_value` tinyint(1) DEFAULT NULL,
+  `string_value` varchar(255) DEFAULT NULL,
+  KEY `PA` (`product_id`,`attribute_id`)
+) ENGINE=InnoDB
+
+```
