@@ -45,4 +45,17 @@ CREATE TABLE `ProductAttribute` (
   KEY `PA` (`product_id`,`attribute_id`)
 ) ENGINE=InnoDB
 
+CREATE TABLE `AttributeIndex` (
+  `product_id` int(11) NOT NULL,
+  `color` int(11) DEFAULT NULL,
+  `size` int(11) DEFAULT NULL,
+  `brand` int(11) DEFAULT NULL,
+  `material` int(11) DEFAULT NULL,
+  `length` float DEFAULT NULL,
+  `height` float DEFAULT NULL,
+  `weight` float DEFAULT NULL,
+  `waterproof` tinyint(1) DEFAULT NULL,
+  `tags` varchar(255) DEFAULT NULL,
+  KEY `P` (`product_id`)
+) ENGINE=InnoDB
 ```
